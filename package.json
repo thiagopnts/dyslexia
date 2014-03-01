@@ -1,8 +1,8 @@
 {
   "name": "Dyslexia",
   "main": "./lib/dyslexia",
-  "version": "0.0.0",
-  "description": "Shows if the Atom is the current window on focus.",
+  "version": "0.0.2",
+  "description": "Shows if Atom is the current window on focus.",
   "repository": "https://github.com/thiagopnts/dyslexia",
   "license": "MIT",
   "engines": {
