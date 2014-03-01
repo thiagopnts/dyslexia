@@ -1,3 +1,8 @@
+DyslexiaView = require './dyslexia-view'
+
 module.exports =
   activate: (state) ->
-    window.onblur = -> console.log "olar perae pls"
+    view = new DyslexiaView()
+    atom.workspaceView.append(view)
+    window.onblur = -> view.show()
+    window.onfocus = -> view.hide()
