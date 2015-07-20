@@ -3,8 +3,8 @@ DyslexiaView = require './dyslexia-view'
 module.exports =
   activate: (state) ->
     view = new DyslexiaView()
-    atom.workspaceView.append(view)
+    modalPanel = atom.workspace.addModalPanel(item: view.getElement(), className: 'dyslexia-modal', visible: false)
     window.onblur = ->
-      view.addClass('dyslexia')
+      modalPanel.show()
     window.onfocus = ->
-      view.removeClass('dyslexia')
+      modalPanel.hide()

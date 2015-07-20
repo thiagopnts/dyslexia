@@ -1,6 +1,8 @@
-{View} = require 'atom'
-
 module.exports =
-  class DyslexiaView extends View
-    @content: ->
-      @div class: ''
+  class DyslexiaView
+    constructor: (serializedState) ->
+      @element = document.createElement('div')
+      @element.classList.add('dyslexia')
+
+    getElement: ->
+      @element
